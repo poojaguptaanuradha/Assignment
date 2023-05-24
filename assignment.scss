@@ -1,0 +1,676 @@
+$fontfamily:roboto;
+
+html {
+  font-family: $fontfamily;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin common(){
+  background-color: #fff;
+  position: relative;
+  margin: auto;
+}
+body{
+  overflow-x: hidden;
+}
+.container{
+  background: linear-gradient(146.92deg, #EA14EC -2.59%, #1246CE 100.83%);
+  width: 100vw;
+  padding: 10px;
+  .contents{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    line-height: 2;
+  }
+  .heading{
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  }
+  .greenbox{
+    width: 63px;
+    height: 27px;
+    background: #008632;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+  }
+  .circle{
+    width: 7px;
+    height: 7px;
+    border-radius: 10px;
+    left: -18px;
+    top: 10px;
+    @include common();
+  }
+  .live{
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #fff;
+    position: relative;
+    top: -6px;
+    left: 9px;
+  }
+  .greyline1{
+      opacity: 0.2;
+      height: 2px;
+      top: -13px;
+      width: 42vw;
+      @include common();
+  }
+}
+
+@mixin comelem(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vs{
+  background: rgba(255, 255, 255, 0.75);
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin: 26px;
+  font-weight: bold;
+  color: #fff;
+  @include comelem();
+}
+
+.logos{
+  width: 100%;
+  @include comelem();
+}
+
+.logo1{
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 45px;
+  border: 5px solid #E50695;
+}
+.logoicon1,.logoicon2{
+  width: 50px;
+  margin: 6px 14px;
+}
+
+.logo2{
+  @extend .logo1;
+  border: 5px solid transparent;
+}
+.scores{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.t1score{
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-left: 10px;
+}
+.opc{
+  opacity: 0.5;
+}
+.t1line1,.t1line2{
+  opacity: 0.2;
+  width: 64px;
+  height: 2px;
+  background: white;
+  position: relative;
+  top: 0px;
+  opacity: 0.5;
+}
+.t2score{
+    @extend .t1score;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+.t2line1,.t2line2{
+  opacity: 0.2;
+  width: 64px;
+  height: 2px;
+  background: white;
+  position: relative;
+  top: 0px;
+  opacity: 0.5;
+}
+
+.elements{
+  width: 60%;
+  margin: 0 auto;
+  flex-direction: column;
+  line-height: 2.5;
+  @include comelem();
+}
+
+.hydrun{
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+}
+.greyline2,.greyline3{
+  opacity: 0.2;
+  margin: auto;
+  height: 2px;
+  background: white;
+  width: 42vw;
+}
+.hydstd{
+  @extend .hydrun;
+  opacity:0.5;
+}
+.icn{
+  position: relative;
+  top:2px;
+  right: 5px;
+}
+.batbowlscore{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.t1t2:hover{
+  background-color: rgb(15, 217, 236);
+}
+.t1t2{
+    background: #FFFFFF;
+    border: 0.5px solid #1F1F1F;
+    border-radius: 5px;
+    width: 450px;
+    height: 40px;
+    color: #1F1F1F;
+}
+.bat{
+  color: #fff;
+  font-weight: bold;
+  line-height: 2.2;
+}
+.bowl{
+  @extend .bat;
+  top: 25em;
+  left: 44em;
+}
+.t1A,.t1T{
+  position: relative;
+  top: 32%;
+  left: 15%;
+}
+.t1R,.t1Y{
+  position: relative;
+  top: 32%;
+  left: 25%;
+}
+.info{
+  width: 95%;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.update{
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 7px;
+}
+.seemore{
+  @extend .update;
+  color: #e50695;
+}
+hr{
+  border-top: 2px solid #e50695;
+}
+.team1img,.team2img{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.shareicon{
+  width: 20px;
+  float: right;
+  margin: 7px;
+}
+.divimg{
+  width: 400px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.imgdiv{
+  width: 373px;
+}
+.sub{
+  width: 373px;
+  height: 86px;
+  position: absolute;
+  margin-top: 123px;
+  padding: 8px;
+}
+
+.royaltext{
+  color:#fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.news{
+  color: black;
+  font-weight: bold;
+  line-height: 2.5;
+}
+
+@mixin horizontalline(){
+  background: linear-gradient(146.92deg, #EA14EC -2.59%, #1246CE 100.83%);
+  height: 5px;
+  border-radius: 6px;
+}
+
+.horizontal{
+  width: 342px;
+  @include horizontalline();
+}
+
+.bimg,.simg{
+  width: 100%;
+  object-fit:cover;
+}
+.simg{
+  height: -webkit-fill-available;
+}
+.divimg1{
+  @extend .divimg;
+  width: 196px;
+}
+.imgdiv1{
+  width: 373px;
+  height: 96px;
+  border-radius: 10px;
+}
+.sub1{
+  width: 176px;
+  height: 160px;
+  position: absolute;
+  padding: 8px;
+  z-index: -1;
+  border-radius: 5px;
+  background: lightgray;
+}
+.royaltext1{
+  position: absolute;
+  top: 101px;
+  font-size: 7px;
+  font-weight: bold;
+}
+.news1{
+  position: relative;
+  top:103px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.shareicon1{
+  width: 20px;
+  position: relative;
+  top: 105px;
+  left: 105px;
+}
+.textover{
+  position: absolute;
+  top: 115px;
+  width: 120px;
+  height: 20px;
+  font-size: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+.horizontal1{
+  width: 159px;
+  margin-top:110px;
+  @include horizontalline()
+}
+
+
+//media query for small devices(tablets and mobiles)
+@media only screen and (max-width: 600px) {
+   .container .greyline1{
+    width: 90vw;
+   }
+  .info{
+   width: 93%;
+   justify-content: space-between;
+   display: flex;
+  }
+  .logos{
+   scale:0.79;
+  }
+  .elements{
+   width: 100%;
+  }
+  .greyline2,.greyline3{
+   width: 90vw;
+  }
+  .t1t2{
+   width: 320px;
+   margin: 20px 19px;
+   font-size: 12px;
+  }
+  .bat,.bowl{
+    margin-left: 20px;
+    line-height: 0.1;
+  }
+  .vs{
+    margin: 13px;
+  }
+  .divimg{
+   width: 377px;
+  }
+  .sub{
+    width: 358px;
+    padding: 0px;
+    height: 82px;
+    background-color: #f5f5f5;
+  }
+  .royaltext{
+    color: black;
+    font-weight: bold;
+    position: relative;
+    top:5px;
+    left:15px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+  }
+  .news{
+    margin-left:15px;
+  }
+  .shareicon{
+    margin-right: 21px;
+    margin-top: 13px;
+    width: 15px;
+  }
+  .horizontal{
+    width: 100%;
+  }
+  #disapp{
+    display: none;
+  }
+  .imgdiv1{
+    width: 179px;
+    height: auto;
+    margin-left: 168px;
+  }
+.sub1{
+  width: 172px;
+  height: 101px;
+  margin-right: 177px;
+  background-color: #f5f5f5;
+}
+.royaltext1{
+  position: absolute;
+  top:11px;
+  font-size: 9px;
+}
+.textover{
+  position: absolute;
+  top:40px;
+  font-size: 9px; 
+}
+.news1{
+  position: relative;
+  top:43px;
+  font-size: 9px;
+}
+.shareicon1{
+  position: relative;
+  top:49px;
+  left:110px;
+  width: 15px;
+}
+.horizontal1{
+  margin-top: 56px;
+  margin-left: 173px;
+}
+}
+
+@media only screen and (min-width: 412px) and (max-width:414px){
+  .info{
+    width: 86%;
+   }
+}
+
+@media only screen and (width: 540px) {
+ .container .heading{
+  font-size: 20px;
+ }
+  .info{
+   width: 66%;
+   justify-content: space-between;
+   display: flex;
+  }
+ } 
+
+ @media only screen and (width: 280px) {
+  .container .heading{
+    font-size: 13px;
+   }
+   .logos{
+      scale: 0.7;
+    }
+  .logo2{
+   margin-left: 48px;
+  }
+  .vstext{
+   font-size: 20px;
+  }
+  .hydrun,.hydstd{
+   font-size: 10px;
+  }
+  .bat,.bowl{
+    margin-left: 25px;
+  }
+  .t1t2{
+    width: 240px;
+    font-size: 10px;
+  }
+  .batbowlscore{
+    margin-left: 62px;
+    width: 50%;
+  }
+  .vstext{
+   scale: 0.8;
+  }
+  .imgdiv{
+    width: auto;
+  }
+  .sub{
+    width: 262px;
+  }
+  .royaltext{
+    font-size: 10px;
+  }
+  .imgdiv1{
+    width: 133px;
+    margin-left: 118px;
+  }
+  .sub1{
+    width: 135px;
+    height: 75px;
+    margin-right: 124px;
+  }
+  .horizontal1{
+    margin-top: 56px;
+    margin-left: 142px;
+    width: 100px;
+  }
+  .team2img{
+    margin-top: 47px;
+  }
+  .royaltext1,.textover,.news1{
+    font-size: 8px;
+  }
+  .news1{
+    position: relative;
+    top:27px; 
+  }
+  .shareicon1{
+    position: relative;
+    top: 31px;
+    left: 78px;
+    width: 11px;
+  }
+  .horizontal1{
+    margin-top: 30px;
+    margin-left: 123px;
+    width: 116px;
+  }
+ }
+ 
+ @media only screen and (width: 360px){
+ .heading{
+  font-size: 16px;
+ }
+ .vs{
+   margin: 8px;
+ }
+ .divimg{
+  width: 360px;
+ }
+ .sub{
+  width: 341px;
+ }
+ .royaltext{
+  font-size: 14px;
+ }
+ .sub1{
+  width: 166px;
+  height: 97px;
+  margin-right: 168px;
+ }
+ .horizontal1{
+  margin-top: 52px;
+  margin-left: 166px
+ }
+ }
+
+ @media only screen and (min-width: 728px) and (max-width: 912px) {
+  .container .greyline1{
+     width: 74vw;
+   }
+   .elements{
+     width: 100%;
+   }
+   .greyline2{
+     width: 74vw;
+   }
+   .greyline3{
+     display: none;
+   }
+   .batbowlscore{
+   width: 100%;
+  }
+  .t1t2{
+   width: 340px;
+   margin: 20px 19px;
+   font-size: 13px;
+  }
+  .bat,.bowl{
+    margin-left: 25px;
+    line-height: 0.2;
+  }
+ }
+ 
+  @media only screen and (width: 768px) {
+   .info{
+   width: 97%;
+   justify-content: space-between;
+   display: flex;
+   }
+   .t1t2{
+    width: 335px;
+   }
+   .divimg{
+    width: 384px;
+   }
+   .horizontal{
+    margin-top: -2px;
+    margin-left: 4px;
+   }
+   .team2img{
+    width: 100%;
+   }
+   .divimg1{
+    width:190px;
+   }
+   .sub1{
+    width: 171px;
+   }
+ } 
+
+ @media only screen and (width: 820px) {
+   .info{
+   width: 93%;
+   justify-content: space-between;
+   display: flex;
+  }
+ } 
+
+ @media only screen and (width: 912px) {
+   .info{
+   width: 84%;
+   justify-content: space-between;
+   display: flex;
+  }
+ } 
+
+ @media only screen and (width: 1024px) {
+   .container .greyline1{
+    width: 51vw;
+   }
+   .info{
+   width: 75%;
+   justify-content: space-between;
+   display: flex;
+  }
+  .elements{
+   width: 100%;
+  }
+  .greyline2,.greyline3{
+   width: 51vw;
+  }
+  .batbowlscore{
+   width: 88%;
+  }
+ .t1t2{
+   width: 400px;
+  } 
+  .bat,.bowl{
+    margin-left: 6px;
+    line-height: 2.2;
+  }
+ } 
+ 
+ @media only screen and (min-width: 1280px){
+  .info{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+   }
+}
